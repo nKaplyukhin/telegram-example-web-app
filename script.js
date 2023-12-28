@@ -1,30 +1,33 @@
 let tg = window.Telegram.WebApp;
 
-tg.MainButton.isVisible = true;
-tg.MainButton.text = "Войти";
+if (tg.ready()) {
+  tg.MainButton.isVisible = true;
 
-tg.MainButton.onClick(() => {
-  const form = document.querySelector(".form");
-  const inputs = form.querySelectorAll(".form__input");
+  tg.MainButton.text = "Войти";
 
-  const inputsValues = inputs.reduce(
-    (acc, item) => ({ ...acc, [item.name]: item.value }),
-    {}
-  );
+  tg.MainButton.onClick(() => {
+    const form = document.querySelector(".form");
+    const inputs = form.querySelectorAll(".form__input");
 
-  tg.MainButton.setParams(inputsValues);
-  tg.close();
-});
+    const inputsValues = Object.values(inputs).reduce(
+      (acc, item) => ({ ...acc, [item.name]: item.value }),
+      {}
+    );
 
-document.querySelector(".test").addEventListener("click", (e) => {
-  console.log(e);
-  const form = document.querySelector(".form");
-  const inputs = form.querySelectorAll(".form__input");
+    tg.MainButton.setParams(inputsValues);
+    tg.close();
+  });
 
-  const inputsValues = Object.values(inputs).reduce(
-    (acc, item) => ({ ...acc, [item.name]: item.value }),
-    {}
-  );
+  document.querySelector(".test").addEventListener("click", (e) => {
+    console.log(e);
+    const form = document.querySelector(".form");
+    const inputs = form.querySelectorAll(".form__input");
 
-  console.log(inputsValues);
-});
+    const inputsValues = Object.values(inputs).reduce(
+      (acc, item) => ({ ...acc, [item.name]: item.value }),
+      {}
+    );
+
+    console.log(inputsValues);
+  });
+}
