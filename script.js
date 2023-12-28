@@ -17,15 +17,15 @@ tg.MainButton.onClick(() => {
   tg.close();
 });
 
-document.querySelector(".test").addEventListener("click", (e) => {
-  console.log(e);
-  const form = document.querySelector(".form");
-  const inputs = form.querySelectorAll(".form__input");
+// document.querySelector(".test").addEventListener("click", (e) => {
+//   console.log(e);
+//   const form = document.querySelector(".form");
+//   const inputs = form.querySelectorAll(".form__input");
 
-  const inputsValues = Object.values(inputs).reduce(
-    (acc, item) => ({ ...acc, [item.name]: item.value }),
-    {}
-  );
+//   const inputsValues = Object.values(inputs).reduce(
+//     (acc, item) => ({ ...acc, [item.name]: item.value }),
+//     {}
+//   );
 
-  console.log(inputsValues);
-});
+//   console.log(JSON.stringify(inputsValues));
+// });
