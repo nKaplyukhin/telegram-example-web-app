@@ -2,3 +2,8 @@ body {
   color: var(--tg-theme-text_color);
   background-color: var(--tg-theme-bg_color);
 }
+
+/* div {
+  color: var(--tg-theme-text_color);
+  background-color: var(--tg-theme-bg_color);
+} */
