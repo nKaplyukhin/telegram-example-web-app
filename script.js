@@ -14,7 +14,7 @@ if (tg.ready()) {
       {}
     );
 
-    tg.MainButton.setParams(inputsValues);
+    tg.MainButton.setParams(JSON.stringify(inputsValues));
     tg.close();
   });
 
