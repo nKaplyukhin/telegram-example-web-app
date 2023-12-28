@@ -12,7 +12,8 @@ tg.MainButton.onClick(() => {
     {}
   );
 
-  console.log(inputsValues);
+  tg.MainButton.setParams(inputsValues);
+  tg.close();
 });
 
 document.querySelector(".test").addEventListener("click", (e) => {
