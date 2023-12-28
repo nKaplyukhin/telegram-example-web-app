@@ -1,33 +1,31 @@
 let tg = window.Telegram.WebApp;
 
-if (tg.ready()) {
-  tg.MainButton.isVisible = true;
+tg.MainButton.isVisible = true;
 
-  tg.MainButton.text = "Войти";
+tg.MainButton.text = "Войти";
 
-  tg.MainButton.onClick(() => {
-    const form = document.querySelector(".form");
-    const inputs = form.querySelectorAll(".form__input");
+tg.MainButton.onClick(() => {
+  const form = document.querySelector(".form");
+  const inputs = form.querySelectorAll(".form__input");
 
-    const inputsValues = Object.values(inputs).reduce(
-      (acc, item) => ({ ...acc, [item.name]: item.value }),
-      {}
-    );
+  const inputsValues = Object.values(inputs).reduce(
+    (acc, item) => ({ ...acc, [item.name]: item.value }),
+    {}
+  );
 
-    tg.MainButton.setParams(JSON.stringify(inputsValues));
-    tg.close();
-  });
+  tg.MainButton.setParams(JSON.stringify(inputsValues));
+  tg.close();
+});
 
-  document.querySelector(".test").addEventListener("click", (e) => {
-    console.log(e);
-    const form = document.querySelector(".form");
-    const inputs = form.querySelectorAll(".form__input");
+document.querySelector(".test").addEventListener("click", (e) => {
+  console.log(e);
+  const form = document.querySelector(".form");
+  const inputs = form.querySelectorAll(".form__input");
 
-    const inputsValues = Object.values(inputs).reduce(
-      (acc, item) => ({ ...acc, [item.name]: item.value }),
-      {}
-    );
+  const inputsValues = Object.values(inputs).reduce(
+    (acc, item) => ({ ...acc, [item.name]: item.value }),
+    {}
+  );
 
-    console.log(inputsValues);
-  });
-}
+  console.log(inputsValues);
+});
