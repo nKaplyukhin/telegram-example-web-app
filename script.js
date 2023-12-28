@@ -14,7 +14,6 @@ tg.MainButton.onClick(() => {
   );
 
   tg.sendData(JSON.stringify(inputsValues));
-  tg.close();
 });
 
 document.querySelector(".test").addEventListener("click", (e) => {
@@ -28,5 +27,4 @@ document.querySelector(".test").addEventListener("click", (e) => {
   );
 
   tg.sendData(JSON.stringify(inputsValues));
-  tg.close();
 });
