@@ -1,3 +1,5 @@
+console.log(window.Telegram);
+
 let tg = window.Telegram.WebApp;
 
 tg.MainButton.isVisible = true;
