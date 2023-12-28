@@ -13,7 +13,7 @@ tg.MainButton.onClick(() => {
     {}
   );
 
-  tg.MainButton.setParams(JSON.stringify(inputsValues));
+  tg.sendData(JSON.stringify(inputsValues)); 
   tg.close();
 });
 
