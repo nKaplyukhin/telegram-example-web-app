@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tg.MainButton.text = "Войти";
 
-  tg.MainButton.onClick(() => {
+  tg.onEvent("mainButtonClicked", function () {
     const form = document.querySelector(".form");
     const inputs = form.querySelectorAll(".form__input");
 
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       (acc, item) => ({ ...acc, [item.name]: item.value }),
       {}
     );
-
     tg.sendData(JSON.stringify(inputsValues));
     tg.close();
   });
