@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {}
     );
     tg.sendData(JSON.stringify(inputsValues));
-    tg.close();
+    // tg.close();
   });
 
   // document.querySelector(".test").addEventListener("click", (e) => {
