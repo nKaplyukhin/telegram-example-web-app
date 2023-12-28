@@ -1,4 +1,4 @@
 body {
-  color: var(--text_color);
-  background-color: var(--bg_color);
+  color: var(--tg-theme-text_color);
+  background-color: var(--tg-theme-bg_color);
 }
