@@ -8,14 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   tg.onEvent("mainButtonClicked", function () {
     const form = document.querySelector(".form");
     const inputs = form.querySelectorAll(".form__input");
+    let inputsValues = {}
 
-    const inputsValues = Object.values(inputs).reduce(
-      (acc, item) => ({ ...acc, [item.name]: item.value }),
-      {}
-    );
-    if (inputsValues.name && inputsValues.password) {
-      tg.MainButton.show();
-    }
+    inputs.forEach(input => {
+      input.addEventListener('change',() => {
+
+      })
+      inputsValues = {
+        ...inputsValues,
+        [input.name]: input.value
+      }
+    })
+
     tg.sendData(JSON.stringify(inputsValues));
   });
 
