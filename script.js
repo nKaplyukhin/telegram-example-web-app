@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let tg = window.Telegram.WebApp;
 
   tg.ready();
-  tg.MainButton.show();
+  tg.MainButton.isVisible = true;
   tg.MainButton.text = "Войти";
 
   tg.onEvent("mainButtonClicked", function () {
