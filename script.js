@@ -2,23 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   let tg = window.Telegram.WebApp;
 
   tg.ready();
-
+  tg.MainButton.show();
   tg.MainButton.text = "Войти";
 
   tg.onEvent("mainButtonClicked", function () {
     const form = document.querySelector(".form");
     const inputs = form.querySelectorAll(".form__input");
-    let inputsValues = {}
+    let inputsValues = {};
 
-    inputs.forEach(input => {
-      input.addEventListener('change',() => {
-
-      })
+    inputs.forEach((input) => {
       inputsValues = {
         ...inputsValues,
-        [input.name]: input.value
-      }
-    })
+        [input.name]: input.value,
+      };
+    });
 
     tg.sendData(JSON.stringify(inputsValues));
   });
