@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(tg.initDataUnsafe);
 
     tg.sendData(JSON.stringify(inputsValues));
+    tg.close();
   });
 
   document.querySelector(".test").addEventListener("click", (e) => {
