@@ -17,13 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     });
 
+    console.log(tg.initDataUnsafe);
+
     tg.sendData(JSON.stringify(inputsValues));
   });
 
   document.querySelector(".test").addEventListener("click", (e) => {
     console.log(e);
 
-    console.log(tg.initDataUnsafe);
     // const form = document.querySelector(".form");
     // const inputs = form.querySelectorAll(".form__input");
 
